@@ -1,0 +1,16 @@
+# Realme Configuration
+
+config MACH_REALME
+     bool "Realme devices"
+     help
+       Support for Realme variants
+
+menu "Realme board selection"
+
+config MACH_REALME_SDM450
+        bool "SDM450 board"
+        select MACH_REALME
+        help
+          Support for Realme SDM450
+
+endmenu
