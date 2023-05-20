@@ -29054,7 +29054,6 @@ WDI_ProcessReceiveFilterSetFilterReq
                    pSessRcvPktFilterCfg->coleasceTime);
         #endif /* VENDOR_EDIT */
 
->>>>>>> 28bea230c07e9a1d3cbd81a3fc05e95a74102319
         for ( i = 0; i < pSessRcvPktFilterCfg->numParams; i++ )
         {
             pSessRcvPktFilterCfg->paramsData[i].protocolLayer =
