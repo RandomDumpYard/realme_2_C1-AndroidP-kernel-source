@@ -1,0 +1,75 @@
+/* Copyright (c) 2017-2018, The Linux Foundation. All rights reserved.
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License version 2 and
+ * only version 2 as published by the Free Software Foundation.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ */
+
+ &spmi_bus {
+	qcom,pmi632@2 {
+		pmi632_pon: qcom,power-on@800 {
+			qcom,s3-src = "kpdpwr-and-resin";
+		};
+        
+        pmi632_vadc: vadc@3100 {
+            chan@2a {
+                qcom,scale-function = <22>;
+            };
+        };
+
+        pmi632_charger: qcom,qpnp-smb5 {
+            /delete-property/ qcom,auto-recharge-soc = <98>;
+            /delete-property/ qcom,flash-disable-soc = <10>;
+            /delete-property/ qcom,sw-jeita-enable;
+            /delete-property/ qcom,step-charging-enable;
+            /delete-property/ qcom,hw-die-temp-mitigation;
+            /delete-property/ qqcom,hw-die-temp-mitigation;
+
+            pinctrl-names = "usbid_default","usbid_sleep";
+			pinctrl-0 = <&usbid_default>;
+			pinctrl-1 = <&usbid_sleep>;
+			qcom,usbid-gpio = <&tlmm 13 0>;
+        };
+    };
+
+	pmi632_3: qcom,pmi632@3 {
+		pmi632_vib: qcom,vibrator@5700 {
+			qcom,vib-overdrive-volt-uv = <3300000>;
+		};
+
+        pmi632_lcdb: qpnp-lcdb@ec00 {
+            /delete-property/ qcom,voltage-step-ramp;
+        };
+
+        flash_led: qcom,leds@d300 {
+            qcom,thermal-thrsh2 = <122>;
+
+            pmi632_flash0: qcom,flash_0 {
+                qcom,max-current = <1000>;
+            }
+
+			/delete-node/ qcom,flash_1
+
+			pmi632_torch0: qcom,torch_0 {
+				qcom,max-current = <150>;
+				qcom,current-ma = <50>;
+			};
+
+            /delete-node/ qcom,torch_1
+
+        };
+    };
+};
+
+&soc {
+	led_flash0: qcom,camera-flash {
+		qcom,flash-name = "pmic";
+		qcom,flash-source = <&pmi632_flash0>;
+		qcom,torch-source = <&pmi632_torch0 &pmi632_torch1>;
+	};
+};

@@ -11,16 +11,12 @@
  * GNU General Public License for more details.
  */
 
-#include "msm8953-mtp.dtsi"
-#include "dsi-panel-nt36525-tianma-hdp-video.dtsi"
-#include "dsi-panel-nt36525-truly-hdp-video.dtsi"
-#include "dsi-panel-ilt9881h_txd-hdp-video.dtsi"
-#include "dsi-panel-ilt9881h_hlt-hdp-video.dtsi"
-#include "dsi-panel-ilt9881h-hlt-new-id-hdp-video.dtsi"
-#include "dsi-panel-hx83102d_hlt-hdp-video.dtsi"
-#include "dsi-panel-hx831112a_huaxian-hdp-video.dtsi"
-#include "dsi-panel-ft8006p-truly-hdp-video.dtsi"
-#include "dsi-panel-ilt7807g-huaxian-hdp-video.dtsi"
+#include "realme-msm8953-mtp.dtsi"
+#include "display/dsi-panel-nt36525-truly-hdp-video.dtsi"
+#include "display/dsi-panel-ilt9881h_hlt-hdp-video.dtsi"
+#include "display/dsi-panel-ilt9881h-hlt-new-id-hdp-video.dtsi"
+#include "display/dsi-panel-hx831112a_huaxian-hdp-video.dtsi"
+#include "display/dsi-panel-ilt7807g-huaxian-hdp-video.dtsi"
 
 //#ifdef ODM_WT_EDIT
 /*
@@ -47,13 +43,7 @@
 	ibb-supply = <&lcdb_ncp_vreg>;
 
 };
-&dsi_nt36525_tianma_hdp_video {
-        qcom,panel-supply-entries = <&dsi_panel_pwr_supply>;
- };
  &dsi_nt36525_truly_hdp_video {
-        qcom,panel-supply-entries = <&dsi_panel_pwr_supply>;
- };
- &dsi_ilt9881h_txd_hdp_video {
         qcom,panel-supply-entries = <&dsi_panel_pwr_supply>;
  };
  &dsi_ilt9881h_hlt_hdp_video {
@@ -62,13 +52,7 @@
  &dsi_ilt9881h_hlt_new_id_hdp_video {
         qcom,panel-supply-entries = <&dsi_panel_pwr_supply>;
  };
- &dsi_hx83102d_hlt_hdp_video {
-        qcom,panel-supply-entries = <&dsi_panel_pwr_supply>;
- };
  &dsi_hx831112a_huaxian_hdp_video {
-        qcom,panel-supply-entries = <&dsi_panel_pwr_supply>;
- };
- &dsi_ft8006p_truly_hdp_video {
         qcom,panel-supply-entries = <&dsi_panel_pwr_supply>;
  };
  &dsi_ilt7807g_huaxian_hdp_video {
@@ -198,10 +182,10 @@
 };
 
 &mtp_batterydata {
-	#include "qg-batterydata-OPPO-DD003desay-ATL-4v4-4230mAh.dtsi"
-	#include "qg-batterydata-OPPO-DD003desay-ATL_300-4v4-4230mAh.dtsi"
-	#include "qg-batterydata-OPPO-DD003desay-SDI-4v4-4230mAh.dtsi"
-	#include "qg-batterydata-OPPO-DD003desay-SDI_300-4v4-4230mAh.dtsi"
+	#include "battery/qg-batterydata-OPPO-DD003desay-ATL-4v4-4230mAh.dtsi"
+	#include "battery/qg-batterydata-OPPO-DD003desay-ATL_300-4v4-4230mAh.dtsi"
+	#include "battery/qg-batterydata-OPPO-DD003desay-SDI-4v4-4230mAh.dtsi"
+	#include "battery/qg-batterydata-OPPO-DD003desay-SDI_300-4v4-4230mAh.dtsi"
 };
 
 &pmi632_charger {
