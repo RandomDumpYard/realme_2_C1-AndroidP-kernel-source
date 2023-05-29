@@ -206,10 +206,10 @@
 };
 */
 // #else /* ODM_WT_EDIT */
-#include "dsi-panel-sim-video.dtsi"
-#include "dsi-panel-ilt9881h-hlt-new-id-hdp-video.dtsi"
-#include "dsi-panel-nt36525-truly-hdp-video.dtsi"
-#include "dsi-panel-hx831112a_huaxian-hdp-video.dtsi"
-#include "dsi-panel-ilt9881h_hlt-hdp-video.dtsi"
-#include "dsi-panel-ilt7807g-huaxian-hdp-video.dtsi"
+#include "realme/display/dsi-panel-sim-video.dtsi"
+#include "realme/display/dsi-panel-ilt9881h-hlt-new-id-hdp-video.dtsi"
+#include "realme/display/dsi-panel-nt36525-truly-hdp-video.dtsi"
+#include "realme/display/dsi-panel-hx831112a_huaxian-hdp-video.dtsi"
+#include "realme/display/dsi-panel-ilt9881h_hlt-hdp-video.dtsi"
+#include "realme/display/dsi-panel-ilt7807g-huaxian-hdp-video.dtsi"
 // #endif /* ODM_WT_EDIT */

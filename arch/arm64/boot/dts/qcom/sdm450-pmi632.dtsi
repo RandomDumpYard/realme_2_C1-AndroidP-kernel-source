@@ -40,10 +40,10 @@
 		//#include "qg-batterydata-ascent-3450mah.dtsi"
 		//#include "qg-batterydata-mlp356477-2800mah.dtsi"
 		//#else /* ODM_WT_EDIT */
-		#include "qg-batterydata-OPPO-DD003desay-ATL-4v4-4230mAh.dtsi"
-		#include "qg-batterydata-OPPO-DD003desay-ATL_300-4v4-4230mAh.dtsi"
-		#include "qg-batterydata-OPPO-DD003desay-SDI-4v4-4230mAh.dtsi"
-		#include "qg-batterydata-OPPO-DD003desay-SDI_300-4v4-4230mAh.dtsi"
+		#include "realme/battery/qg-batterydata-OPPO-DD003desay-ATL-4v4-4230mAh.dtsi"
+		#include "realme/battery/qg-batterydata-OPPO-DD003desay-ATL_300-4v4-4230mAh.dtsi"
+		#include "realme/battery/qg-batterydata-OPPO-DD003desay-SDI-4v4-4230mAh.dtsi"
+		#include "realme/battery/qg-batterydata-OPPO-DD003desay-SDI_300-4v4-4230mAh.dtsi"
 		//#endif /* ODM_WT_EDIT */
 	};
 };
