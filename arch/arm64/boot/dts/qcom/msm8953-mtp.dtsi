@@ -16,7 +16,7 @@
 //#ifndef ODM_WT_EDIT
 //#include "msm8953-camera-sensor-mtp.dtsi"
 //#else /* ODM_WT_EDIT */
-#include "sdm450-camera-sensor-mtp-S88051AA1.dtsi"
+#include "realme/realme-sdm450-camera-sensor-mtp-S88051AA1.dtsi"
 //#endif /* ODM_WT_EDIT */
 
 &blsp1_uart0 {
